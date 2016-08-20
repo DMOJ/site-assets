@@ -41,7 +41,8 @@ window.timezone_picker = function ($map, $field, json_data) {
             return dx * dx + dy * dy;
         },
         activate: function () {
-            $field.val(this.name).trigger('change');
+            if ($field.val() != this.name)
+                $field.val(this.name).trigger('change');
             $axisX.css('left', this.x * 100 + '%');
             $axisY.css('top', this.y * 100 + '%');
         },
