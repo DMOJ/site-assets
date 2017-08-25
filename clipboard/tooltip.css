@@ -131,8 +131,7 @@
     width: -moz-max-content;
     width: max-content;
     max-width: 250px;
-    word-break: break-word;
-    word-wrap: normal;
+    word-wrap: break-word;
     white-space: pre-line;
     border-collapse: separate
 }
