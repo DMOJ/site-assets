@@ -5507,6 +5507,56 @@
 
     //! moment.js locale configuration
 
+    hooks.defineLocale('el', {
+        months : 'Ιανουάριος_Φεβρουάριος_Μάρτιος_Απρίλιος_Μάϊος_Ιούνιος_Ιούλιος_Αυγουστος_Σεπτέμβιος_Οκτώβριος_Νοέμβριος_Δεκέμβριος'.split('_'),
+        montsShort : 'Ιαν._Φεβ._Μαρτ._Απρ._Μάϊ._Ιούν._Ιούλ._Αύγ._Σεπτ._Οκτ._Νοεμ._Δεκ.'.split('_'),
+        monthsParseExact : true,
+        weekdays : 'Κυριακή_Δευτέρα_Τρίτη_Τετάρτη_Πέμπτη_Παρασκευή_Σάββατο'.split('_'),
+        weekdayShort : 'Κυρ._Δευτ._Τρ,_Τετ._Πεμ._Παρ._Σάβ.'.split('_'),
+        weekdayMin : 'Κ_Δ_Τρ_Τετ_Πεμ_Παρ_Σ'.split('_'),
+        weekdaysParseExact : true,
+        longDateFormat : {
+            LT: 'HH:mm',
+            LTS: 'HH:mm:ss',
+            L : 'DD.MM.YYYY',
+            LL : 'D. MMMM YYYY',
+            LLL : 'D. MMMM YYYY HH:mm',
+            LLLL : 'dddd, D. MMMM YYYY HH:mm'
+        },
+        calendar : {
+            sameDay: '[Σήμερα στις] LT',
+            sameElse: 'L',
+            nextDay: '[Αύριο στις] LT',
+            nextWeek: 'dddd [στις] LT',
+            lastDay: '[Χθες στις] LT',
+            lastWeek: '[Την προηγούμενη] dddd [στις] LT'
+        },
+        relativeTime : {
+            future : 'σε %s',
+            past : 'πριν %s',
+            s : 'μερικά δευτερόλεπτα',
+            ss : '%d δευτερόλεπτα',
+            m : 'ένα λεπτό',
+            mm : '%d λεπτά',
+            h : 'μία ώρα',
+            hh : '%d ώρες',
+            d : 'μία μέρα',
+            dd : '%d μέρες',
+            M : 'ένα μήνα',
+            MM : '%d μήνες',
+            y : 'ένα χρόνο',
+            yy : '%d χρόνια'
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}\./,
+        ordinal : '%d.',
+        week : {
+            dow : 1, // Monday is the first day of the week.
+            doy : 4  // The week that contains Jan 4th is the first week of the year.
+        }
+    });
+
+    //! moment.js locale configuration
+
     hooks.defineLocale('zh-hans', {
         months : '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
         monthsShort : '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_'),
@@ -5608,3 +5658,5 @@
     return hooks;
 
 })));
+
+
